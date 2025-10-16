@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UGLY FISH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sohne:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -42,6 +43,7 @@
             font-weight: bold;
             letter-spacing: 3px;
             color: #d4af37;
+            font-family: 'Sohne', sans-serif;
         }
 
         .nav-links {
@@ -256,6 +258,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            text-align: center;
         }
 
         .feature-card::before {
@@ -304,7 +307,7 @@
             color: #aaa;
             line-height: 1.8;
             letter-spacing: 1px;
-            text-align: left;
+            text-align: center;
         }
 
         .gallery {
@@ -388,6 +391,18 @@
             letter-spacing: 1px;
         }
 
+        .contact-item a {
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover,
+        .contact-item a:visited,
+        .contact-item a:active {
+            color: #aaa;
+            text-decoration: none;
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
@@ -440,7 +455,7 @@
 </head>
 <body>
     <nav id="navbar">
-        <div class="logo">UGLY FISH</div>
+        <div class="logo">uglyfish.</div>
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -455,24 +470,6 @@
     </nav>
 
     <section class="hero" id="home">
-    </section>
-
-    <section id="about">
-        <h2 class="section-title">Gorgeous Venues</h2>
-        <div style="text-align: center; margin-bottom: 5rem;">
-            <a href="#reserve" class="cta-button">Our Restaurants</a>
-        </div>
-        <div class="features">
-            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800')">
-                <h3>Ugly Fish</h3>
-            </div>
-            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800')">
-                <h3>Seoul Garden NC</h3>
-            </div>
-            <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800')">
-                <h3>Seoul Garden Durham</h3>
-            </div>
-        </div>
     </section>
 
     <section id="menu">
@@ -508,31 +505,10 @@
         <div class="features">
             <div class="feature-card">
                 <div class="reserve-header">
-                    <h3 style="margin: 0;">Ugly Fish</h3>
-                    <a href="#" class="cta-button" style="margin: 0; padding: 0.75rem 2rem;">Book Now</a>
+                    <a href="#" class="cta-button" style="margin: 0 auto; padding: 0.75rem 2rem;">Book Now</a>
                 </div>
                 <div class="reserve-content">
-                    <p style="margin-bottom: 2rem;">Raleigh<br>Raleigh, NC 27069</p>
-                    <p>Mon-Thu: 5PM - 10PM<br>Fri-Sat: 5PM - 11PM<br>Sun: 4PM - 9PM</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="reserve-header">
-                    <h3 style="margin: 0;">Raleigh</h3>
-                    <a href="#" class="cta-button" style="margin: 0; padding: 0.75rem 2rem;">Book Now</a>
-                </div>
-                <div class="reserve-content">
-                    <p style="margin-bottom: 2rem;">Raleigh<br>Raleigh, NC 27069</p>
-                    <p>Mon-Thu: 5PM - 10PM<br>Fri-Sat: 5PM - 11PM<br>Sun: 4PM - 9PM</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="reserve-header">
-                    <h3 style="margin: 0;">Durham</h3>
-                    <a href="#" class="cta-button" style="margin: 0; padding: 0.75rem 2rem;">Book Now</a>
-                </div>
-                <div class="reserve-content">
-                    <p style="margin-bottom: 2rem;">Raleigh<br>Raleigh, NC 27069</p>
+                    <p style="margin-bottom: 2rem;">123 Main Street<br>Chicago, IL 60601</p>
                     <p>Mon-Thu: 5PM - 10PM<br>Fri-Sat: 5PM - 11PM<br>Sun: 4PM - 9PM</p>
                 </div>
             </div>
@@ -549,9 +525,9 @@
 
     <footer id="contact">
         <div class="footer-content">
-            <h3>UGLY FISH</h3>
+            <h3>uglyfish.</h3>
             <div class="footer-inline">
-                <div class="contact-item">Contact us: (919) 850-9984</div>
+                <div class="contact-item"><a href="tel:(919)850-9984">Contact us: (919) 850-9984</a></div>
                 <div style="height: 20px; width: 1px; background: rgba(212, 175, 55, 0.3);"></div>
                 <div class="social-links">
                     <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" aria-label="Instagram">
@@ -571,7 +547,7 @@
                     </a>
                 </div>
             </div>
-            <p style="margin-top: 3rem; color: #666; font-size: 0.9rem;">© 2025 Ugly Fish. All rights reserved.</p>
+            <p style="margin-top: 3rem; color: #666; font-size: 0.9rem;">© 2025 uglyfish. All rights reserved.</p>
         </div>
     </footer>
 
