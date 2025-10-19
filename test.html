@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UGLY FISH</title>
     <link href="https://fonts.googleapis.com/css2?family=Sohne:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -657,37 +656,12 @@
         function openMenuPage() {
             document.getElementById('menuPage').classList.add('active');
             document.body.style.overflow = 'hidden';
-            renderPDF();
         }
 
         function closeMenuPage() {
             document.getElementById('menuPage').classList.remove('active');
             document.body.style.overflow = 'auto';
         }
-
-        // PDF rendering function
-        let pdfDoc = null;
-        let pageNum = 1;
-
-        async function renderPDF() {
-            try {
-                if (!pdfDoc) {
-                    pdfDoc = await pdfjsLib.getDocument('https://thingsthing.github.io/menu.pdf').promise;
-                }
-                const page = await pdfDoc.getPage(pageNum);
-                const canvas = document.getElementById('pdfCanvas');
-                const context = canvas.getContext('2d');
-                const viewport = page.getViewport({ scale: 1.5 });
-                canvas.width = viewport.width;
-                canvas.height = viewport.height;
-                await page.render({ canvasContext: context, viewport: viewport }).promise;
-            } catch (error) {
-                console.error('Error rendering PDF:', error);
-            }
-        }
-
-        // Set the worker
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
