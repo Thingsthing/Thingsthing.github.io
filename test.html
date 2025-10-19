@@ -634,6 +634,17 @@
         </div>
     </footer>
 
+    <div class="menu-page" id="menuPage">
+        <div class="pdf-container">
+            <div class="pdf-header">
+                <h2>uglyfish.</h2>
+                <p>Our Curated Menu</p>
+            </div>
+            <embed src="https://thingsthing.github.io/menu.pdf" type="application/pdf" class="pdf-viewer" />
+        </div>
+        <button class="close-menu-btn" onclick="closeMenuPage()">Close Menu</button>
+    </div>
+
     <script>
         // Hamburger menu toggle
         const hamburger = document.getElementById('hamburger');
@@ -654,13 +665,21 @@
 
         // Menu page functions
         function openMenuPage() {
-            document.getElementById('menuPage').classList.add('active');
-            document.body.style.overflow = 'hidden';
+            const menuPage = document.getElementById('menuPage');
+            if (menuPage) {
+                menuPage.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                console.error('Menu page element not found');
+            }
         }
 
         function closeMenuPage() {
-            document.getElementById('menuPage').classList.remove('active');
-            document.body.style.overflow = 'auto';
+            const menuPage = document.getElementById('menuPage');
+            if (menuPage) {
+                menuPage.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
         }
 
         // Close menu when clicking outside
