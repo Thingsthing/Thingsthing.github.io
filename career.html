@@ -96,19 +96,32 @@
 
     .position-card {
       background: linear-gradient(135deg, #111 0%, #050505 100%);
-      padding: 3rem;
+      padding: 2rem;
       border-radius: 10px;
       border: 1px solid rgba(255, 255, 255, 0.05);
       transition: all 0.4s ease;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
     .position-card:hover {
       transform: translateY(-5px);
       border-color: rgba(255, 255, 255, 0.2);
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .position-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      opacity: 0.85;
+      transition: opacity 0.3s ease;
+    }
+
+    .position-card:hover .position-image {
+      opacity: 1;
     }
 
     .position-card h3 {
@@ -205,7 +218,7 @@
 </head>
 <body>
   <nav>
-    <a href="index.html"> <h3>uglyfish.</h3></a>
+    <a href="index.html"><h3>uglyfish.</h3></a>
     <a href="index.html">Back to Home</a>
   </nav>
 
@@ -220,31 +233,41 @@
     </div>
 
     <div class="positions-grid">
+      <!-- Host -->
       <div class="position-card">
+        <img src="https://images.unsplash.com/photo-1512485800893-b08ec1ea59b1?auto=format&fit=crop&w=800&q=80" alt="Host" class="position-image">
         <h3>Host</h3>
         <p>Create memorable first impressions and manage guest flow with warmth and professionalism.</p>
         <a href="mailto:uglyfishnc@gmail.com?subject=Application for Host Position" class="apply-btn">Apply Now</a>
       </div>
 
+      <!-- Server -->
       <div class="position-card">
+        <img src="https://images.unsplash.com/photo-1516554646385-7642248096d1?auto=format&fit=crop&w=800&q=80" alt="Server" class="position-image">
         <h3>Server</h3>
         <p>Deliver exceptional dining experiences through attentive service and menu expertise.</p>
         <a href="mailto:uglyfishnc@gmail.com?subject=Application for Server Position" class="apply-btn">Apply Now</a>
       </div>
 
+      <!-- Busser -->
       <div class="position-card">
+        <img src="https://images.unsplash.com/photo-1574966739987-65e38db0f7ce?auto=format&fit=crop&w=800&q=80" alt="Busser" class="position-image">
         <h3>Busser</h3>
         <p>Support our service team in maintaining impeccable dining room standards.</p>
         <a href="mailto:uglyfishnc@gmail.com?subject=Application for Busser Position" class="apply-btn">Apply Now</a>
       </div>
 
+      <!-- Sushi Chef -->
       <div class="position-card">
+        <img src="https://images.unsplash.com/photo-1502364271109-0a9a75a2a9df?auto=format&fit=crop&w=800&q=80" alt="Sushi Chef" class="position-image">
         <h3>Sushi Chef</h3>
         <p>Craft beautiful and delicious sushi with precision, creativity, and traditional techniques.</p>
         <a href="mailto:uglyfishnc@gmail.com?subject=Application for Sushi Chef Position" class="apply-btn">Apply Now</a>
       </div>
 
+      <!-- Kitchen Chef -->
       <div class="position-card">
+        <img src="https://plus.unsplash.com/premium_photo-1687697861242-03e99059e833?auto=format&fit=crop&w=800&q=80" alt="Kitchen Chef" class="position-image">
         <h3>Kitchen Chef</h3>
         <p>Join our culinary team and bring your passion for cooking to our dynamic kitchen.</p>
         <a href="mailto:uglyfishnc@gmail.com?subject=Application for Kitchen Chef Position" class="apply-btn">Apply Now</a>
