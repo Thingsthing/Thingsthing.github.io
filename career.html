@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers | uglyfish.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sohne:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 4rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav h3 {
+      font-family: 'Sohne', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+      color: #fff;
+      text-transform: lowercase;
+      transition: text-shadow 0.3s ease;
+    }
+
+    nav h3:hover {
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+
+    header {
+      text-align: center;
+      padding: 6rem 2rem 2rem;
+    }
+
+    header h1 {
+      font-family: 'Sohne', sans-serif;
+      font-size: 3.5rem;
+      letter-spacing: 6px;
+      color: #fff;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+
+    header p {
+      color: #ccc;
+      letter-spacing: 2px;
+      font-size: 1.1rem;
+    }
+
+    section {
+      padding: 6rem 4rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .careers-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 4rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    .positions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .position-card {
+      background: linear-gradient(135deg, #111 0%, #050505 100%);
+      padding: 3rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .position-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .position-card h3 {
+      font-size: 1.8rem;
+      color: #fff;
+      letter-spacing: 2px;
+      margin: 0;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    }
+
+    .position-card p {
+      color: #aaa;
+      line-height: 1.8;
+      letter-spacing: 0.5px;
+      flex-grow: 1;
+    }
+
+    .apply-btn {
+      padding: 0.75rem 2rem;
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      align-self: flex-start;
+    }
+
+    .apply-btn:hover {
+      background: #fff;
+      color: #0a0a0a;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+      transform: translateX(5px);
+    }
+
+    .careers-footer {
+      text-align: center;
+      padding: 3rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .careers-footer p {
+      color: #ccc;
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      letter-spacing: 1px;
+    }
+
+    .careers-footer a {
+      color: #fff;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+
+    footer {
+      background: #050505;
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    footer h3 {
+      font-family: 'Sohne', sans-serif;
+      color: #fff;
+      font-size: 1.8rem;
+      letter-spacing: 4px;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    }
+
+    footer p {
+      color: #666;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 4rem 2rem;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h3>uglyfish.</h3>
+    <a href="index.html">Back to Home</a>
+  </nav>
+
+  <header>
+    <h1>Join Our Team</h1>
+    <p>Build your culinary career with us</p>
+  </header>
+
+  <section>
+    <div class="careers-intro">
+      <p>We're looking for passionate individuals who share our commitment to excellence and hospitality. Join our team and be part of something special.</p>
+    </div>
+
+    <div class="positions-grid">
+      <div class="position-card">
+        <h3>Host</h3>
+        <p>Create memorable first impressions and manage guest flow with warmth and professionalism.</p>
+        <a href="mailto:uglyfishnc@gmail.com?subject=Application for Host Position" class="apply-btn">Apply Now</a>
+      </div>
+
+      <div class="position-card">
+        <h3>Server</h3>
+        <p>Deliver exceptional dining experiences through attentive service and menu expertise.</p>
+        <a href="mailto:uglyfishnc@gmail.com?subject=Application for Server Position" class="apply-btn">Apply Now</a>
+      </div>
+
+      <div class="position-card">
+        <h3>Busser</h3>
+        <p>Support our service team in maintaining impeccable dining room standards.</p>
+        <a href="mailto:uglyfishnc@gmail.com?subject=Application for Busser Position" class="apply-btn">Apply Now</a>
+      </div>
+
+      <div class="position-card">
+        <h3>Sushi Chef</h3>
+        <p>Craft beautiful and delicious sushi with precision, creativity, and traditional techniques.</p>
+        <a href="mailto:uglyfishnc@gmail.com?subject=Application for Sushi Chef Position" class="apply-btn">Apply Now</a>
+      </div>
+
+      <div class="position-card">
+        <h3>Kitchen Chef</h3>
+        <p>Join our culinary team and bring your passion for cooking to our dynamic kitchen.</p>
+        <a href="mailto:uglyfishnc@gmail.com?subject=Application for Kitchen Chef Position" class="apply-btn">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="careers-footer">
+      <p>Don't see your position? We're always looking for talented individuals.</p>
+      <p>Email us at <a href="mailto:uglyfishnc@gmail.com">uglyfishnc@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <h3>uglyfish.</h3>
+    <p>© 2025 uglyfish. All rights reserved.</p>
+  </footer>
+</body>
+</html>
